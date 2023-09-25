@@ -1,0 +1,46 @@
+<!-- <div class="wrapper">
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+      
+        <ng-container matColumnDef="username">
+          <th mat-header-cell *matHeaderCellDef> Username </th>
+          <td mat-cell *matCellDef="let element"> {{element.username}} </td>
+        </ng-container>
+      
+        <ng-container matColumnDef="age">
+          <th mat-header-cell *matHeaderCellDef> Age </th>
+          <td mat-cell *matCellDef="let element"> {{element.age}} </td>
+        </ng-container>
+      
+        <ng-container matColumnDef="address">
+          <th mat-header-cell *matHeaderCellDef> Address </th>
+          <td mat-cell *matCellDef="let element"> {{element.address}} </td>
+        </ng-container>
+      
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr> -->
+
+<!-- </table>  
+</div> -->
+
+
+  
+<div>
+  <div>
+    <p class="table-title">Adult Avengers</p>
+  </div>
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Address</th>
+    </tr>
+    <ng-container *ngFor="let user of users">     
+      <!-- ng-container does not renders in DOM -->
+      <tr *ngIf="user.age>20">
+        <td>{{user.username}}</td>
+        <td>{{user.age}}</td>
+        <td>{{user.address}}</td>
+      </tr>
+    </ng-container>
+  </table>
+</div>

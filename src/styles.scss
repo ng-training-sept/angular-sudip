@@ -1,0 +1,21 @@
+/* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+  height: 100%;
+  background-color: rgb(23, 21, 61);
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  color: aqua;
+  margin: 100px 200px;
+}
+
+.wrapper{
+  padding: 50px;
+  text-align: center;
+  width: 100%;
+  border: solid white;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

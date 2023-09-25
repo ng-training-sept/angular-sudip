@@ -1,0 +1,16 @@
+<div>
+
+  
+    <h2 [style]="style">{{ message.title }} </h2>
+
+    <input [style]="inputFieldStyle" matInput [(ngModel)]="message.username">
+    <button mat-button disabled="false" [disabled]="!message.username" (click)="onClicks()">RESET</button>
+
+    <p class="display-username">{{message.username}}</p>
+    
+    <div *ngIf="(message.username | lowercase) === 'cars' ">
+      <div *ngFor="let car of cars">
+        <p appSpecial>{{car}}</p>
+      </div>
+    </div>
+</div>

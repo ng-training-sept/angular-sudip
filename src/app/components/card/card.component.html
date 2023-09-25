@@ -1,0 +1,25 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>{{ message.greetings }}</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <h3>I am running on port {{ message.port }}</h3>
+    <p>Status: {{ getServerStatus() }}</p>
+    <!-- <img [src]="imageUrl" alt="shiba"> -->
+    <button
+      [ngClass]="{'green' : toggle, 'red': !toggle}"
+      mat-button
+      [disabled]="isLikeDisabled"
+      (click)="onLike()"
+    >
+      LIKE
+    </button>
+    <button mat-button [disabled]="isShareDisabled">SHARE</button>
+  </mat-card-content>
+  <h2>Likes {{ count }}</h2>
+</mat-card>
+
+
+
+
+
