@@ -2,15 +2,20 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
+import { ReversePipe } from "../../pipes/reverse.pipe";
 
 @Component({
-  selector: 'app-task4',
-  standalone: true,
-  imports: [CommonModule, MatCardModule, MatButtonModule],
-  templateUrl: './task4.component.html',
-  styleUrls: ['./task4.component.scss']
+    selector: 'app-task4',
+    standalone: true,
+    templateUrl: './task4.component.html',
+    styleUrls: ['./task4.component.scss'],
+    imports: [CommonModule, MatCardModule, MatButtonModule, ReversePipe]
 })
 export class Task4Component {
+
+  birthday = new Date(1988, 3, 15);
+
+  salary: number = 10000; 
 
   inputFieldStyle: string = 'height: 10px; padding: 10px; margin: 0px 10px';
 
