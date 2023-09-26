@@ -1,0 +1,12 @@
+.card-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.card {
+    max-width: 400px;
+    margin: 5px;
+    background-color: rgb(55, 98, 179);
+    color: black;
+}
