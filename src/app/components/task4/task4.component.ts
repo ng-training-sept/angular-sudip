@@ -16,8 +16,8 @@ export class Task4Component {
   // to pass values to parent
   @Output() titleEvent$ = new EventEmitter<string>();
 
-  onAddCard(title: any): void {
-    this.titleEvent$.emit(title);
-    console.log(title.key);
+  detectInput(title: any): void {
+    this.titleEvent$.emit(title.target.value);
+    console.log(title.target.value);
   }
 }

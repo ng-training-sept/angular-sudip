@@ -2,5 +2,5 @@
     <p>{{ user }}</p>
 </ng-container>
 
-
-<input type="text" (keypress)="onAddCard($event)">
+<!-- detect and print immediately -->
+<input type="text" (input)="detectInput($event)">

@@ -17,5 +17,8 @@ export class AppComponent {
 
   cardsTitle: string[] = ['Steve', 'Dylan', 'Minoru', 'Amarachi', 'Wanda'];
 
+  writeEvent(title: string){
+    this.cardsTitle.push(title)
+  }
 
 }
