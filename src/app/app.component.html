@@ -8,5 +8,5 @@
     <app-task3></app-task3>
     <br> -->
     <!-- this binding is to pass values from parent to child -->
-    <app-task4 [titles]="cardsTitle"></app-task4>
+    <app-task4 [titles]="cardsTitle" (titleEvent$)="writeEvent($event)" (deleteEvent$)="deleteUser($event)"></app-task4>
 </div>
