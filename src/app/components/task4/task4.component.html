@@ -3,4 +3,6 @@
 </ng-container>
 
 <!-- detect and print immediately -->
-<input type="text" (input)="detectInput($event)">
+<!-- <input type="text" (input)="detectInput($event)"> -->
+<input [style]="inputFieldStyle" #username>
+<button mat-raised-button color="primary" (click)="detectInput(username.value)">Press to add Users</button>
