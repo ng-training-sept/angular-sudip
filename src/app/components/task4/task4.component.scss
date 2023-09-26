@@ -1,0 +1,12 @@
+.card-wrapper{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+mat-card{
+    margin: 5px;
+    background-color: rgb(43, 126, 126);
+    color: black;
+}
+

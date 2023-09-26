@@ -18,7 +18,13 @@ export class AppComponent {
   cardsTitle: string[] = ['Steve', 'Dylan', 'Minoru', 'Amarachi', 'Wanda'];
 
   writeEvent(title: string){
-    this.cardsTitle.push(title)
+    this.cardsTitle.push(title);
+    console.log("test:", title);
+  }
+
+  deleteUser(username: string){
+    let index = this.cardsTitle.indexOf(username);
+    this.cardsTitle.splice(index, 1);
   }
 
 }
