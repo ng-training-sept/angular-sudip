@@ -22,14 +22,14 @@ export class SportsComponent implements OnInit{
               name: 'Football',
               price: 1500,
               imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/1/1d/Football_Pallo_valmiina-cropped.jpg',
-              description: 'Football description'
+              description: 'Brazuca'
           },
           {
               id: '2',
               name: 'Football Boot',
               price: 6000,
               imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/AdidasEtruscoBoot.jpg/230px-AdidasEtruscoBoot.jpg',
-              description: 'Football description'
+              description: 'Spectra'
           }
       ];
   }

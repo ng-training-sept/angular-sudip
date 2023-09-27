@@ -18,17 +18,17 @@ export class GroceryComponent implements OnInit {
       this.groceryCards = [
           {
               id: '1',
-              name: 'Brocauli',
+              name: 'Sausage',
               price: 1500,
               imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/1/1d/Football_Pallo_valmiina-cropped.jpg',
-              description: 'Football description'
+              description: 'Chicken Sausage'
           },
           {
               id: '2',
               name: 'Juice',
               price: 6000,
               imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/AdidasEtruscoBoot.jpg/230px-AdidasEtruscoBoot.jpg',
-              description: 'Football description'
+              description: 'Un jugo de naranja'
           }
       ];
   }

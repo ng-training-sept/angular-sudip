@@ -1,8 +1,9 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { Card } from './gcard.model';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-gcard',
@@ -23,5 +24,12 @@ export class GcardComponent {
   //   {id: '1', name: 'Strange', price: 37, description: 'NYC'},
   // ];
 
+  private readonly router = inject(Router);
+  private readonly route = inject(ActivatedRoute);
+
   @Input() cards: Card[] = [];
+
+  goToItemDetails(data: Card): void {
+    this.router.navigate(['card-item', data.id], {state: {data}, relativeTo: this.route}).then();
+  }
 }
