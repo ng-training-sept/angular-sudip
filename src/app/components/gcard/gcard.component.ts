@@ -15,11 +15,13 @@ import { Card } from './gcard.model';
 
 
 export class GcardComponent {
-  @Input() cards: Card[] = [
-    {id: '1', name: 'Steve', price: 75, description: 'Brooklyn'},
-    {id: '1', name: 'Tony', price: 35, description: 'NYC'},
-    {id: '1', name: 'Natasha', price: 19, description: 'Belarus'},
-    {id: '1', name: 'Wanda', price: 18, description: 'Sokovia'},
-    {id: '1', name: 'Strange', price: 37, description: 'NYC'},
-  ];
+  // @Input() cards: Card[] = [
+  //   {id: '1', name: 'Steve', price: 75, description: 'Brooklyn'},
+  //   {id: '1', name: 'Tony', price: 35, description: 'NYC'},
+  //   {id: '1', name: 'Natasha', price: 19, description: 'Belarus'},
+  //   {id: '1', name: 'Wanda', price: 18, description: 'Sokovia'},
+  //   {id: '1', name: 'Strange', price: 37, description: 'NYC'},
+  // ];
+
+  @Input() cards: Card[] = [];
 }
