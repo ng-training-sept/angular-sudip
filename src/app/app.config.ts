@@ -2,6 +2,7 @@ import { ApplicationConfig } from '@angular/core';
 import { provideAnimations } from '@angular/platform-browser/animations';
 import { Routes, provideRouter } from '@angular/router';
 import { GroceryComponent } from './forms/grocery/grocery.component';
+import { authGuard } from './service/auth/auth.constants';
 // import { SportsComponent } from './forms/sports/sports.component';
 // import { CardItemComponent } from './components/gcard/card-item/card-item.component';
 
@@ -16,9 +17,14 @@ export const routes: Routes = [
     loadComponent: () =>
       import('./forms/home/home.component').then((m) => m.HomeComponent),
   },
-  { path: 'grocery', component: GroceryComponent },
   {
     path: 'grocery',
+    canActivate: [authGuard],     // guard is working because of this, there are multiple guards...
+    component: GroceryComponent,
+  },
+  {
+    path: 'grocery',
+    canActivate: [authGuard],
     loadChildren: () =>
       import('./forms/grocery/grocery.routes').then((m) => m.routes),
   },
