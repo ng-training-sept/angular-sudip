@@ -5,3 +5,5 @@ node_modules
 .anugular
 
 Notes.md
+
+src/environment.ts

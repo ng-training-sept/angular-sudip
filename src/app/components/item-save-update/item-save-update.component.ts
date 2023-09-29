@@ -3,11 +3,12 @@ import { CommonModule } from '@angular/common';
 import { MAT_DIALOG_DATA, MatDialogModule, MatDialogRef } from '@angular/material/dialog';
 import { MatInputModule } from '@angular/material/input';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { MatButtonModule } from '@angular/material/button';
 
 @Component({
   selector: 'app-item-save-update',
   standalone: true,
-  imports: [CommonModule, MatDialogModule, MatInputModule, ReactiveFormsModule],
+  imports: [CommonModule, MatDialogModule, MatInputModule, MatButtonModule, ReactiveFormsModule],
   templateUrl: './item-save-update.component.html',
   styleUrls: ['./item-save-update.component.scss'],
 })
